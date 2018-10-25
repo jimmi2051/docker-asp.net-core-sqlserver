@@ -1,0 +1,38 @@
+@model IEnumerable<QL_Sach.Models.Book>
+@{
+    ViewData["Title"] = "View Books";
+}
+<div class="container">
+    <div class="row">
+        <h2 style="text-align:center;">List Books </h2>
+        <a href="/Book/CreateBook" class="btn btn-danger" style="text-align:right;float:right; margin-bottom:15px;">Add book</a>
+<table class="table">
+  <tr>
+      <th>ID Book</th>
+      <th>Name Book</th>
+      <th>Author</th>
+      <th>Num Pages</th>
+      <th>Type Book</th>
+      <th>PublishingCompany</th>
+      <th>Price</th>
+      <th>Action</th>
+  </tr>
+    @foreach (var x in @Model)
+    {
+    <tr>
+        <td>@x.IdBook</td>
+        <td>@x.NameBook</td>
+        <td>@x.Author</td>
+        <td>@x.NumPage</td>
+        <td>@x.TypeBook</td>
+        <td>@x.PublishingCompany</td>
+        <td>@x.Price</td>
+        <td>
+            <a href="/Book/EditBook/@x.Id">Edit</a>
+            <a href="/Book/DeleteBook/@x.Id">Delete</a>
+        </td>
+    </tr>
+    }
+</table>
+</div>
+</div>

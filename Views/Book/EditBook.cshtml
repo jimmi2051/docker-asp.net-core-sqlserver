@@ -1,0 +1,43 @@
+@model QL_Sach.Models.Book
+@{
+    ViewData["Title"] = "View Books";
+}
+<h2>Edit Book</h2>
+<div class="container">
+    <div class="row">
+        <a href="/Book/ViewBook" class="btn btn-default col-md-2">Back to list</a>
+        <div class="clearfix"></div>
+        @using (Html.BeginForm("EditBook","Book",FormMethod.Post, new {@class="col-lg-6",@style="padding-left:0px"}))
+        {
+             <div class="form-group">
+                <label>Id Book</label>
+                <input class="form-control" value="@Model.IdBook" name="IdBook" type="text">
+            </div>
+            <div class="form-group">
+                <label>Name Book</label>
+                <input class="form-control" value="@Model.NameBook" name="NameBook" type="text">
+            </div>
+             <div class="form-group">
+                <label>Author</label>
+                <input class="form-control" value="@Model.Author"  name="Author" type="text">
+            </div>
+            <div class="form-group">
+                <label>Num Pages</label>
+                <input class="form-control"value="@Model.NumPage"  name="NumPage" type="text">
+            </div>
+            <div class="form-group">
+                <label>Type Book</label>
+                <input class="form-control" value="@Model.TypeBook"  name="TypeBook" type="text">
+            </div>
+               <div class="form-group">
+                <label>PublishingCompany</label>
+                <input class="form-control" value="@Model.PublishingCompany"  name="PublishingCompany" type="text">
+            </div>
+               <div class="form-group">
+                <label>Price</label>
+                <input class="form-control" value="@Model.Price"  name="Price" type="text">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Edit Book">Edit book</button>
+        }
+    </div>
+</div>
