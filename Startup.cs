@@ -20,7 +20,7 @@ namespace QL_Sach
         {
             Configuration = configuration;
         }
-
+ 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -38,9 +38,19 @@ namespace QL_Sach
             var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
             var password = Environment.GetEnvironmentVariable("SQLSERVER_SA_PASSWORD") ?? "ThisIsPass1@";
             //var connString = $"Data Source={hostname};Initial Catalog=QL_Sach;User ID=sa;Password={password};";
-            var connString = $"Server=db;Initial Catalog=QL_Sach;User ID=sa;Password={password};";
+            var connString = $"Server=db;Initial Catalog=QL_Sach;User=sa;Password={password};";
 
-            services.AddDbContext<QL_SachContext>(options => options.UseSqlServer(connString));
+            services.AddDbContext<QL_SachContext>(options =>
+            {
+                options.UseSqlServer(connString,
+            sqlServerOptionsAction: sqlOptions =>
+                    {
+                        sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 10,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

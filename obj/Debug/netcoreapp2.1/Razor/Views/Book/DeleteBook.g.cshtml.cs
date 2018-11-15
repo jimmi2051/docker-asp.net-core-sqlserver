@@ -80,7 +80,7 @@ using QL_Sach.Models;
             WriteLiteral("                </div>\n        <div class=\"clearfix\"></div>\n        ");
             EndContext();
             BeginContext(523, 1444, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c213bd9f1194826b759076242ad486b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b25995680c443f9859eebc07e268ab8", async() => {
                 BeginContext(580, 121, true);
                 WriteLiteral("\n             <div class=\"form-group\">\n                <label>Id Book</label>\n                <input class=\"form-control\"");
                 EndContext();

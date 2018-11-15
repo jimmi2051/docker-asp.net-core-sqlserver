@@ -3,7 +3,7 @@ services:
     web:
         image: "deftnt/asp_net_core_sql_server"
         ports:
-            - "8000:80"
+            - "8080:80"
         restart: always
         depends_on:
             - db

@@ -73,7 +73,6 @@ namespace QL_Sach.Controllers
                 return View(target);
             }
         }
-// github.com/pqthang97/studentos
         [HttpPost, ActionName("DeleteBook")]
         public IActionResult DeleteConfirmed(int ID)
         {

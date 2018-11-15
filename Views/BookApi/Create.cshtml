@@ -1,0 +1,49 @@
+@model QL_Sach.Models.Book
+@{
+    ViewData["Title"] = "View Books";
+}
+<h2>Create Book</h2>
+<div class="container">
+    <div class="row">
+       @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-success">Add Success</div>               
+        }
+        
+         <a href="/BookApi/Index" class="btn btn-default col-md-2">Back to list</a>
+         <div class="clearfix"></div>
+        @using (Html.BeginForm("Create","BookApi",FormMethod.Post, new {@class="col-lg-6",@style="padding-left:0px"}))
+        {
+             <div class="form-group">
+                <label>Id Book</label>
+                <input class="form-control" name="IdBook" type="text">
+            </div>
+            <div class="form-group">
+                <label>Name Book</label>
+                <input class="form-control" name="NameBook" type="text">
+            </div>
+             <div class="form-group">
+                <label>Author</label>
+                <input class="form-control" name="Author" type="text">
+            </div>
+            <div class="form-group">
+                <label>Num Pages</label>
+                <input class="form-control"name="NumPage" type="text">
+            </div>
+            <div class="form-group">
+                <label>Type Book</label>
+                <input class="form-control"name="TypeBook" type="text">
+            </div>
+               <div class="form-group">
+                <label>PublishingCompany</label>
+                <input class="form-control"name="PublishingCompany" type="text">
+            </div>
+               <div class="form-group">
+                <label>Price</label>
+                <input class="form-control" name="Price" type="text">
+            </div>
+           
+            <button type="submit" class="btn btn-primary" value="Add book">Add book</button>
+        }
+    </div>
+</div>

@@ -70,3 +70,6 @@
 /home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/QL_Sach.dll
 /home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/QL_Sach.pdb
 /home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/QL_Sach.csproj.CopyComplete
+/home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/Razor/Views/BookApi/Index.g.cshtml.cs
+/home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/Razor/Views/BookApi/Create.g.cshtml.cs
+/home/deftnt/QL_Sach_SQL_part_2/obj/Debug/netcoreapp2.1/Razor/Views/BookApi/Update.g.cshtml.cs
